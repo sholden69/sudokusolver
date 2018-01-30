@@ -28,8 +28,8 @@ def r(a):
      # try each successive non-excluded number recursively into r()
       r(a[:i]+m+a[i+1:])
     else:
-      print("backtrack:",a)
-    
+      print("backtrack on square",i,":",a)
+
   #if it doesnt find an answer exits the function and returns back up to higher level. Need to understand backtracking
 
 if __name__ == '__main__':
