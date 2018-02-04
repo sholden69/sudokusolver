@@ -80,17 +80,17 @@ def r_simple(a):
     if m not in excluded_numbers:
      # try each successive non-excluded number recursively into r()
       r_simple(a[:i]+m+a[i+1:])
-    else:
-      print("backtrack on square",i,":",a)
+ #   else:
+ #    print("backtrack on square",i,":",a)
 
   #if it doesnt find an answer exits the function and returns back up to higher level. Need to understand backtracking
 
 if __name__ == '__main__':
   if len(sys.argv) == 2 and len(sys.argv[1]) == 81:
     # run some pre-heuristics to see what we can solve
-    a=r_apply_heuristics(sys.argv[1])
-    print(a)
-   # r_simple(sys.argv[1])
+   # a=r_apply_heuristics(sys.argv[1])
+   # print(a)
+    r_simple(sys.argv[1])
   else:
     print ('Usage: python sudoku.py puzzle')
     print ('  where puzzle is an 81 character string  representing the puzzle read left-to-right, top-to-bottom, and 0 is a blank')
